@@ -1,7 +1,33 @@
 {
   "extends": ["@commitlint/config-conventional"],
+  "formatter": "@commitlint/format",
   "rules": {
-    "type-enum": [2, "always", ["feat", "fix", "docs", "style", "refactor", "test", "chore", "ci"]],
-    "scope-case": [2, "always", "lower-case"]
-  }
+    "type-enum": [
+      2,
+      "always",
+      [
+        "init",
+        "build",
+        "ci",
+        "docs",
+        "feat",
+        "fix",
+        "perf",
+        "refactor",
+        "revert",
+        "style",
+        "test"
+      ]
+    ],
+    "body-leading-blank": [2, "always"],
+    "footer-leading-blank": [2, "always"],
+    "header-max-length": [2, "always", 72],
+    "scope-case": [2, "always", "lower-case"],
+    "subject-empty": [2, "never"],
+    "subject-full-stop": [2, "never", "."],
+    "type-case": [2, "always", "lower-case"],
+    "type-empty": [2, "never"]
+  },
+  "defaultIgnores": true,
+  "helpUrl": "https://github.com/conventional-changelog/commitlint/#what-is-commitlint"
 }
